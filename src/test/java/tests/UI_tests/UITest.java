@@ -87,6 +87,7 @@ public class UITest {
         inventoryPage.sortByText("Name (A to Z)");
         assertEquals("Sauce Labs Backpack", inventoryPage.getFirstProductTitle(), "Prvý produkt by mal byť 'Sauce Labs Backpack' po zoradení produktov podľa názvu A→Z");
 
+        //zakomentovane z dovodu overenia spravnosti ziskanych dat, v pripade potreby odkomentovat a pouzit v testoch  (vlozit do ArrayListu a assertu)
         //List<Double> originalPrices = inventoryPage.getAllProductPrices();
 
         //Zoradenie produktov podla ceny od najmensej po najvyssiu

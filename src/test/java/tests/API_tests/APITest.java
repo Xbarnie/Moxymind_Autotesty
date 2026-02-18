@@ -96,6 +96,7 @@ public class APITest extends TestBaseAPI {
                 .post("/users")
                 .then()
                 .statusCode(201)
+                .body("id", notNullValue())
                 .body("createdAt", notNullValue())
                 .body(matchesJsonSchema(schemaJson))
                 .time(lessThan(RESPONSE_LIMIT_MS))

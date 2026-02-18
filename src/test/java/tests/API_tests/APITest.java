@@ -49,6 +49,9 @@ public class APITest extends TestBaseAPI {
         assertFalse(data.isEmpty(), "'data' musí obsahovať aspoň 1 používateľa");
         assertTrue(total > 0, "'total' musí byť väčšie než 0");
         assertTrue(total >= data.size(), "'total' musí byť väčšie alebo rovné počtu používateľov v 'data'");
+        assertEquals("Smith", data.get(0).get("last_name"));
+        assertEquals("Johnson", data.get(1).get("last_name"));
+        assertEquals(total, data.size(), "Počet prijatých používateľov sa nezhoduje s 'total'");
 
         //Overenie, že každý používateľ má vyplnenu hodnotu 'last_name'
         data.forEach(user -> {
